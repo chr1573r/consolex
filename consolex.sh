@@ -9,4 +9,5 @@ echo "Last update was: $(cat ../last_update.txt)"
 echo
 echo "This terminal supports $(tput lines) lines"
 echo "and $(tput cols) characters on each"
+sudo halt
 sleep 60
