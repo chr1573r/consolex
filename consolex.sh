@@ -7,7 +7,7 @@ echo "-----------------------------------------------------"
 echo "Hello World!"
 echo "Last update was: $(cat ../last_update.txt)"
 echo
-echo "Current temperature: $(curl http://okarin/current.txt)"
+echo "Current temperature: $(curl -s http://okarin/current.txt)"
 echo
 echo
 echo "This terminal supports $(tput lines) lines"
