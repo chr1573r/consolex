@@ -7,7 +7,9 @@ echo "-----------------------------------------------------"
 echo "Hello World!"
 echo "Last update was: $(cat ../last_update.txt)"
 echo
+echo "Current temperature: $(curl http://okarin/current.txt)"
+echo
+echo
 echo "This terminal supports $(tput lines) lines"
 echo "and $(tput cols) characters on each"
-sudo halt
 sleep 60
