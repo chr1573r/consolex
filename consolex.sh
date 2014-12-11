@@ -58,7 +58,6 @@ function screen2 {
 }
 
 function screen3 {
-	echo
 	echo -e "                        ###"
 	echo -e "                        ###"
 	echo -e "                        ###"
