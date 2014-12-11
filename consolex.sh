@@ -52,7 +52,7 @@ function screen_jmi {
 	echo -e "    Provided by Jonassen meterologiske institutt"
 }
 
-function screen_terminfo" {
+function screen_terminfo {
 	ec "This terminal supports $(tput lines) lines"
 	ec "and $(tput cols) characters on each"
 }
