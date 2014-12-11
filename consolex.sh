@@ -43,9 +43,8 @@ function display {
 
 function screen1 {
 	ec
-	ec
-	ec
 	echo -e "    Incredible weather statistics from Gimlemoen"$LIGHTCYAN""
+	ec
 	ec
 	figlet -t -c -f mono9 " $(curl -s http://192.168.2.125/current.txt)$(echo -e "\xb0") "
 	ec
@@ -79,7 +78,7 @@ function screen3 {
 	sleep 2
 	sudo python ./bin/readTouch.py
 	if [[ "$?" == "0" ]]; then
-		ec ""$LIGHTGREEN"                  Shutdown initiated!"
+		echo -ne ""$LIGHTGREEN"                  Shutdown initiated!"
 		sudo halt
 	fi
 
