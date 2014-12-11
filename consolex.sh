@@ -93,6 +93,8 @@ echo
 echo -e "        AutoMapGeneratorScript by Cj Designs" 
 echo -e "       :------------------------------------:"$LIGHTCYAN""
 echo
+echo
+echo
 echo -e "Status for minecraft.csdnserver.com:"
 echo
 echo -e $(curl -s http://minecraft.csdnserver.com/lastupdate2.txt)
