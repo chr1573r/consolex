@@ -42,11 +42,11 @@ function display {
 
 function screen1 {
 	ec
-	echo "  Incredible weather statistics from Gimlemoen"
+	echo "    Incredible weather statistics from Gimlemoen"
 	ec
 	figlet -t -c -f mono9 " $(curl -s http://192.168.2.125/current.txt)$(echo -e "\xb0") "
 	ec
-	echo "   Provided by Jonassen meterologiske institutt"
+	echo "    Provided by Jonassen meterologiske institutt"
 }
 
 function screen2 {
@@ -55,7 +55,6 @@ function screen2 {
 }
 
 function screen3 {
-	echo
 	echo
 	echo -e ""$CYAN"                        ###"
 	echo -e "                        ###"
