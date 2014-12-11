@@ -54,21 +54,21 @@ function screen2 {
 }
 
 function screen3 {
-	ec "                        ###"
-	ec "                        ###"
-	ec "                        ###"
-	ec "                  ###   ###   ###" 
-	ec "                 ##     ###     ##"
-	ec "                ##      ###      ##"
-	ec "               ##       ###       ##"
-	ec "               ##       ###       ##"
-	ec "               ##                 ##"
-	ec "                ##               ##"
-	ec "                 ##             ##"
-	ec "                  ####       ####"
-	ec "                     #########"
-	ec
-	ec "          Power button, hold to activate"
+	echo -e ""$YELLOW"                        ###"
+	echo -e "                        ###"
+	echo -e "                        ###"
+	echo -e "                  ###   ###   ###" 
+	echo -e "                 ##     ###     ##"
+	echo -e "                ##      ###      ##"
+	echo -e "               ##       ###       ##"
+	echo -e "               ##       ###       ##"
+	echo -e "               ##                 ##"
+	echo -e "                ##               ##"
+	echo -e "                 ##             ##"
+	echo -e "                  ####       ####"
+	echo -e "                     #########"
+	echo
+	echo -e ""$DEF"         Power button, hold now to activate"
 	sleep 2
 	sudo python ./bin/readTouch.py
 	if [[ "$?" == "0" ]]; then
