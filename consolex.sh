@@ -29,9 +29,9 @@ function ec {
 
 function header {
 	clear
-	echo -e ""$LIGHTRED" // "$WHITE" ConsoleX $APPVERSION "$LIGHTRED"// Active screen: "$LIGHTCYAN"$1"
-	echo ""$LIGHTRED"-----------------------------------------------------"
-	echo
+	ec ""$LIGHTRED""$WHITE" ConsoleX $APPVERSION "$LIGHTRED"> "$LIGHTCYAN"$1"
+	ec ""$LIGHTRED"-----------------------------------------------------"
+	ec
 }
 
 function display {
@@ -41,6 +41,8 @@ function display {
 }
 
 function screen1 {
+	ec
+	ec
 	ec "Current temperature: "
 	ec
 	figlet -t -c -f mono9 " $(curl -s http://192.168.2.125/current.txt)$(echo -e "\xb0") "
@@ -52,7 +54,7 @@ function screen2 {
 }
 
 function screen3 {
-	ec Reading screen input in...
+	ec "Reading screen input in..."
 	ec "3"
 	sleep 1
 	ec "2"
