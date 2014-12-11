@@ -42,11 +42,11 @@ function display {
 
 function screen1 {
 	ec
-	ec "  Incredible weather statistics from Gimlemoen"
+	echo "  Incredible weather statistics from Gimlemoen"
 	ec
 	figlet -t -c -f mono9 " $(curl -s http://192.168.2.125/current.txt)$(echo -e "\xb0") "
 	ec
-	ec "   Provided by Jonassen meterologiske institutt"
+	echo "   Provided by Jonassen meterologiske institutt"
 }
 
 function screen2 {
@@ -55,7 +55,7 @@ function screen2 {
 }
 
 function screen3 {
-	echo -e ""$LIGHTYELLOW"                        ###"
+	echo -e ""$CYAN"                        ###"
 	echo -e "                        ###"
 	echo -e "                        ###"
 	echo -e "                  ###   ###   ###" 
@@ -73,9 +73,8 @@ function screen3 {
 	sleep 2
 	sudo python ./bin/readTouch.py
 	if [[ "$?" == "0" ]]; then
-		ec ""$LIGHTGREEN"Input detected!"
-	else
-		ec ""$LIGHTRED"Input NOT detected!"
+		ec ""$LIGHTGREEN"Shutdown initiated!"
+		sudo halt
 	fi
 
 }
