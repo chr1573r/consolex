@@ -54,14 +54,22 @@ function screen2 {
 }
 
 function screen3 {
-	ec "Reading screen input in..."
-	ec "3"
-	sleep 1
-	ec "2"
-	sleep 1
-	ec "1"
-	sleep 1
-	ec "Reading..."
+	ec "                        ###"
+	ec "                        ###"
+	ec "                        ###"
+	ec "                  ###   ###   ###" 
+	ec "                 ##     ###     ##"
+	ec "                ##      ###      ##"
+	ec "               ##       ###       ##"
+	ec "               ##       ###       ##"
+	ec "               ##                 ##"
+	ec "                ##               ##"
+	ec "                 ##             ##"
+	ec "                  ####       ####"
+	ec "                     #########"
+	ec
+	ec "          Power button, hold to activate"
+	sleep 2
 	sudo python ./bin/readTouch.py
 	if [[ "$?" == "0" ]]; then
 		ec ""$LIGHTGREEN"Input detected!"
@@ -75,4 +83,4 @@ function screen3 {
 init
 display "screen1" "10"
 display "screen2" "10"
-display "screen3" "10"
+display "screen3" "1"
