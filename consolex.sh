@@ -55,6 +55,8 @@ function screen2 {
 }
 
 function screen3 {
+	echo
+	echo
 	echo -e ""$CYAN"                        ###"
 	echo -e "                        ###"
 	echo -e "                        ###"
