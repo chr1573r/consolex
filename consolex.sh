@@ -86,5 +86,5 @@ function screen3 {
 #main, not looped
 init
 display "screen1" "5"
-display "screen2" "5"
 display "screen3" "0"
+display "screen2" "5"
