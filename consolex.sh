@@ -41,23 +41,23 @@ function display {
 	sleep $2
 }
 
-function screen1 {
+function screen_jmi {
 	ec
-	echo -e "    Incredible weather statistics from Gimlemoen"$LIGHTCYAN""
+	echo -e "    Incredible weather statistics from Gimlemoen"
 	ec
 	ec
 	figlet -t -c -f mono9 " $(curl -s http://192.168.2.125/current.txt)$(echo -e "\xb0") "
 	ec
 	ec
-	echo -e ""$DEF"    Provided by Jonassen meterologiske institutt"
+	echo -e "    Provided by Jonassen meterologiske institutt"
 }
 
-function screen2 {
+function screen_terminfo" {
 	ec "This terminal supports $(tput lines) lines"
 	ec "and $(tput cols) characters on each"
 }
 
-function screen3 {
+function screen_powerbutton {
 	echo -e "                        ###"
 	echo -e "                        ###"
 	echo -e "                        ###"
@@ -83,8 +83,25 @@ function screen3 {
 
 }
 
+function screen_amgstatus {
+echo -e ""$LIGHTGREEN"                _/_/    _/      _/    _/_/_/"
+echo -e "             _/    _/  _/_/  _/_/  _/       "
+echo -e "            _/_/_/_/  _/  _/  _/  _/  _/_/  "
+echo -e "           _/    _/  _/      _/  _/    _/   "
+echo -e "          _/    _/  _/      _/    _/_/_/    "
+echo
+echo -e "        AutoMapGeneratorScript by Cj Designs" 
+echo -e "       :------------------------------------:"
+echo
+echo -e "Status for minecraft.csdnserver.com:"
+echo -e $(curl -s http://minecraft.csdnserver.com/lastupdate2.txt)
+echo -e "$(curl -s http://minecraft.csdnserver.com/status2.txt)"$DEF""
+
+}
+
 #main, not looped
 init
-display "screen1" "5"
-display "screen3" "0"
-display "screen2" "5"
+display "screen_jmi" "5"
+display "screen_terminfo" "3"
+display "screen_powerbutton" "0"
+display "screen_amgstatus" "5"
