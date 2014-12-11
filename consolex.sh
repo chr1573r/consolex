@@ -35,6 +35,7 @@ function header {
 }
 
 function display {
+	reset
 	header "$1"
 	$1
 	sleep $2
@@ -42,11 +43,14 @@ function display {
 
 function screen1 {
 	ec
-	echo "    Incredible weather statistics from Gimlemoen"
+	ec
+	ec
+	echo "    Incredible weather statistics from Gimlemoen"$LIGHTCYAN""
 	ec
 	figlet -t -c -f mono9 " $(curl -s http://192.168.2.125/current.txt)$(echo -e "\xb0") "
 	ec
-	echo "    Provided by Jonassen meterologiske institutt"
+	ec
+	echo ""$DEF"    Provided by Jonassen meterologiske institutt"
 }
 
 function screen2 {
@@ -56,7 +60,7 @@ function screen2 {
 
 function screen3 {
 	echo
-	echo -e ""$CYAN"                        ###"
+	echo -e ""$RED"                        ###"
 	echo -e "                        ###"
 	echo -e "                        ###"
 	echo -e "                  ###   ###   ###" 
@@ -70,11 +74,12 @@ function screen3 {
 	echo -e "                  ####       ####"
 	echo -e "                     #########"
 	echo
+	echo
 	echo -e ""$DEF"         Power button, hold now to activate"
 	sleep 2
 	sudo python ./bin/readTouch.py
 	if [[ "$?" == "0" ]]; then
-		ec ""$LIGHTGREEN"Shutdown initiated!"
+		ec ""$LIGHTGREEN"                  Shutdown initiated!"
 		sudo halt
 	fi
 
