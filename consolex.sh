@@ -84,16 +84,17 @@ function screen_powerbutton {
 }
 
 function screen_amgstatus {
-echo -e ""$LIGHTGREEN"                _/_/    _/      _/    _/_/_/"
+echo -e ""$GREEN"                _/_/    _/      _/    _/_/_/"
 echo -e "             _/    _/  _/_/  _/_/  _/       "
 echo -e "            _/_/_/_/  _/  _/  _/  _/  _/_/  "
 echo -e "           _/    _/  _/      _/  _/    _/   "
 echo -e "          _/    _/  _/      _/    _/_/_/    "
 echo
 echo -e "        AutoMapGeneratorScript by Cj Designs" 
-echo -e "       :------------------------------------:"
+echo -e "       :------------------------------------:"$LIGHTCYAN""
 echo
 echo -e "Status for minecraft.csdnserver.com:"
+echo
 echo -e $(curl -s http://minecraft.csdnserver.com/lastupdate2.txt)
 echo -e "$(curl -s http://minecraft.csdnserver.com/status2.txt)"$DEF""
 
