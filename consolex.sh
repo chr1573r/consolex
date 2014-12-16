@@ -22,6 +22,8 @@ function init {
 	RED="\x1b[31;11m"
 	LIGHTYELLOW="\x1b[33;01m"
 	YELLOW="\x1b[33;11m"
+
+	reset
 }
 function ec {
 	echo -e ""$1""$DEF""
@@ -35,7 +37,6 @@ function header {
 }
 
 function display {
-	reset
 	header "$1"
 	$1
 	sleep $2
