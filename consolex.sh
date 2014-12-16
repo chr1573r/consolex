@@ -102,9 +102,21 @@ echo -e "$(curl -s http://minecraft.csdnserver.com/status2.txt)"$DEF""
 
 }
 
+function screen_wd1337 {
+	pushd ../watchdog1337pitft
+	if [[ "$(tail -1 settings.cfg)" == "RUN_ONCE=1" ]]; then
+		./watchdog1337pitft.sh
+	else
+		echo "RUN_ONCE=1">>settings.cfg
+		./watchdog1337pitft.sh
+	fi
+	popd
+}
+
 #main, not looped
 init
 display "screen_jmi" "5"
-display "screen_terminfo" "3"
-display "screen_powerbutton" "0"
+#display "screen_terminfo" "3"
+display "screen_wd1337" "0"
 display "screen_amgstatus" "5"
+display "screen_powerbutton" "0"
