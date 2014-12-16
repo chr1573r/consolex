@@ -28,16 +28,24 @@ while true
 			echo "Melde om update in progress"
 			touch working.txt
 
+			echo "Lagre til persistence service"
+			cp ~/container/watchdog1337pitft/settings.cfg ~/container/persistence/watchdog1337pitft/settings.cfg
+			cp ~/container/watchdog1337pitft/hosts.lst ~/container/persistence/watchdog1337pitft/hosts.lst
+
 			echo "Rydde opp"
 			rm -rf ~/container/consolex
 			rm -rf ~/container/watchdog1337pitft
 			rm ~/container/update.txt
 			rm ~/container/ready.txt
 
-			echo "Laste ned filer fra github"
+			echo "Klon repositories fra github"
 			git clone https://github.com/chr1573r/consolex
 			git clone https://github.com/chr1573r/watchdog1337pitft
 			chmod -R +x ~/container/
+
+			echo "Gjenopprett fra persistence service"
+			mv  ~/container/persistence/watchdog1337pitft/settings.cfg ~/container/watchdog1337pitft/settings.cfg
+			mv  ~/container/persistence/watchdog1337pitft/hosts.lst ~/container/watchdog1337pitft/hosts.lst
 
 			echo "Melde fra om at update er ferdig"
 			rm ~/container/working.txt

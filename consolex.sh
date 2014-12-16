@@ -103,6 +103,7 @@ echo -e "$(curl -s http://minecraft.csdnserver.com/status2.txt)"$DEF""
 }
 
 function screen_wd1337 {
+	echo "Launching fullscreen extension..."
 	pushd ../watchdog1337pitft
 	if [[ "$(tail -1 settings.cfg)" == "RUN_ONCE=1" ]]; then
 		./watchdog1337pitft.sh
