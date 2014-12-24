@@ -105,7 +105,7 @@ echo -e "$(curl -s http://minecraft.csdnserver.com/status2.txt)"$DEF""
 
 function screen_toxic {
 	echo -e ""$LIGHTGREEN" Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic ToxicToxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic ToxicToxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic ToxicToxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic ToxicToxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic ToxicToxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic ToxicToxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic ToxicToxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic ToxicToxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic ToxicToxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic ToxicToxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic ToxicToxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic ToxicToxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic ToxicToxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic ToxicToxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic ToxicToxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic"
-}}
+}
 
 function screen_wd1337 {
 	echo "Launching fullscreen extension..."
