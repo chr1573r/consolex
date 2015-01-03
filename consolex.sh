@@ -112,8 +112,6 @@ echo -e "     CC             SS   DD   DD   NN    NN NN"
 echo -e "     CCCCCC   SSSSSS    DDDDD     NN     NNN"
 echo -e "    _________________________________________"$LIGHTCYAN""
 echo
-echo
-echo
 echo -e "Minecraft server status:"
 echo
 
