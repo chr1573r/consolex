@@ -103,9 +103,25 @@ echo -e "$(curl -s http://minecraft.csdnserver.com/status2.txt)"$DEF""
 
 }
 
-function screen_toxic {
-	echo -e ""$LIGHTGREEN" Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic ToxicToxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic ToxicToxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic ToxicToxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic ToxicToxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic ToxicToxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic ToxicToxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic ToxicToxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic ToxicToxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic ToxicToxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic ToxicToxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic ToxicToxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic ToxicToxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic ToxicToxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic ToxicToxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic ToxicToxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic Toxic"
+function screen_mcstatus {
+echo -e ""$GREEN"          CCCCCC    SSSSSS   DDDDD     NN       NN"
+echo -e "        CC        SS        DD   DD   NNN      NN"
+echo -e "       CC         SSS      DD    D   NN  NN   NN"
+echo -e "      CC           SSS    DD    D   NN   NN  NN"
+echo -e "     CC             SS   DD   DD   NN    NN NN"
+echo -e "     CCCCCC   SSSSSS    DDDDD     NN     NNN"
+echo -e "    _________________________________________"$LIGHTCYAN""
+echo
+echo
+echo
+echo -e "Minecraft server status:"
+echo
+
+while read -r HOSTENTRY; do python ./bin/mcs.py $HOSTENTRY; done < ~/container/persistent/mcs/servers.txt
+echo -e ""$DEF""
+
 }
+
 
 function screen_wd1337 {
 	echo "Launching fullscreen extension..."
@@ -125,5 +141,5 @@ display "screen_jmi" "5"
 #display "screen_terminfo" "3"
 display "screen_wd1337" "0"
 display "screen_amgstatus" "5"
+display "screen_mcstatus" "5"
 display "screen_powerbutton" "0"
-display "screen_toxic" "10"
