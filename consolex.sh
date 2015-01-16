@@ -25,6 +25,15 @@ function init {
 
 	reset
 }
+
+function clean_up {
+	reset
+	clear
+	echo -e "consolex.sh terminated at $(date)"
+	exit
+}
+
+
 function ec {
 	echo -e ""$1""$DEF""
 }
@@ -47,7 +56,7 @@ function screen_jmi {
 	echo -e "    Incredible weather statistics from Gimlemoen"
 	ec
 	ec
-	figlet -t -c -f mono9 " $(curl -s http://okarin/current.txt)$(echo -e "\xb0") "
+	figlet -t -c -f mono9 " $(curl -s http://gateway.hybel.csdnserver.com:8181/current.txt)$(echo -e "\xb0") "
 	ec
 	ec
 	echo -e "    Provided by Jonassen meterologiske institutt"
@@ -134,10 +143,11 @@ function screen_wd1337 {
 }
 
 #main, not looped
+trap clean_up SIGINT SIGTERM
 init
 display "screen_jmi" "5"
 #display "screen_terminfo" "3"
 display "screen_wd1337" "0"
-display "screen_amgstatus" "5"
-display "screen_mcstatus" "5"
+#display "screen_amgstatus" "5"
+#display "screen_mcstatus" "5"
 display "screen_powerbutton" "0"

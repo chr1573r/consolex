@@ -1,6 +1,17 @@
 #!/bin/bash
+
+function clean_up {
+	reset
+	clear
+	echo -e "rescopy.sh terminated at $(date)"
+	exit
+}
+
+trap clean_up SIGINT SIGTERM
+
 while true
 	do
+
 		echo "Sjekk om update er tilgjengelig"
 		cd ~/container/consolex
 		git remote update
