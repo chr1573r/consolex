@@ -147,7 +147,7 @@ trap clean_up SIGINT SIGTERM
 init
 display "screen_jmi" "5"
 #display "screen_terminfo" "3"
-display "screen_wd1337" "0"
-#display "screen_amgstatus" "5"
-#display "screen_mcstatus" "5"
-display "screen_powerbutton" "0"
+#display "screen_wd1337" "0"
+display "screen_amgstatus" "5"
+display "screen_mcstatus" "5"
+#display "screen_powerbutton" "0"
