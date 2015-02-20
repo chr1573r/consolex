@@ -68,6 +68,7 @@ function screen_jmi {
 function screen_terminfo {
 	ec "This terminal supports $(tput lines) lines"
 	ec "and $(tput cols) characters on each"
+	ec $(/sbin/ifconfig eth0 | grep "inet addr" | awk -F: '{print $2}' | awk '{print $1}')
 }
 
 function screen_powerbutton {
