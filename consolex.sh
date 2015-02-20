@@ -56,8 +56,8 @@ function screen_jmi {
 	echo -e "    Incredible weather statistics from Gimlemoen"
 	#ec
 	#ec
-	#figlet -t -c -f mono9 " $(curl -s http://gateway.hybel.csdnserver.com:8181/current.txt)$(echo -e "\xb0") "
-	figlet -t -c -f mono9 " $(curl -s http://okarin/current.txt)$(echo -e "\xb0") "
+	figlet -t -c -f mono9 " $(curl -s http://gateway.hybel.csdnserver.com:8181/current.txt)$(echo -e "\xb0") "
+	#figlet -t -c -f mono9 " $(curl -s http://okarin/current.txt)$(echo -e "\xb0") "
 	figlet -t -c -f mono9 " $(sudo temper-poll -c -q)$(echo -e "\xb0") "
 
 	#ec
@@ -149,9 +149,9 @@ function screen_wd1337 {
 #main, not looped
 trap clean_up SIGINT SIGTERM
 init
-display "screen_jmi" "5"
-#display "screen_terminfo" "3"
+display "screen_jmi" "2"
+display "screen_terminfo" "2"
 display "screen_wd1337" "0"
-display "screen_amgstatus" "5"
-display "screen_mcstatus" "5"
+#display "screen_amgstatus" "5"
+#display "screen_mcstatus" "5"
 display "screen_powerbutton" "0"
