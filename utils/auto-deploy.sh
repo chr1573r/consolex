@@ -3,7 +3,7 @@
 function clean_up {
 	reset
 	clear
-	echo -e "rescopy.sh terminated at $(date)"
+	echo -e "auto-deploy.sh terminated at $(date)"
 	exit
 }
 
@@ -13,11 +13,6 @@ while true
 	do
 
 		echo "Sjekk om update er tilgjengelig"
-		mkdir ~/container
-		mkdir ~/container/persistence
-		mkdir ~/container/persistence/mcs
-		mkdir ~/container/persistence/watchdog1337pitft
-		mkdir ~/container/persistence/notifysh
 		cd ~/container/consolex
 		git remote update
 
@@ -39,6 +34,11 @@ while true
 			done
 			echo "Klarering gitt!"
 			echo "Naviger til rett mappe"
+			mkdir ~/container
+			mkdir ~/container/persistence
+			mkdir ~/container/persistence/mcs
+			mkdir ~/container/persistence/watchdog1337pitft
+			mkdir ~/container/persistence/notifysh
 			cd ~/container
 
 			echo "Melde om update in progress"
