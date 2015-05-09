@@ -52,6 +52,7 @@ while true
 			echo "Klon repositories fra github"
 			git clone https://github.com/chr1573r/consolex
 			git clone https://github.com/chr1573r/watchdog1337pitft
+			git clone https://github.com/chr1573r/notifysh
 			chmod -R +x ~/container/
 
 			echo "Gjenopprett fra persistence service"
