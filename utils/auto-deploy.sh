@@ -13,6 +13,11 @@ while true
 	do
 
 		echo "Sjekk om update er tilgjengelig"
+		mkdir ~/container
+		mkdir ~/container/persistence
+		mkdir ~/container/persistence/mcs
+		mkdir ~/container/persistence/watchdog1337pitft
+		mkdir ~/container/persistence/notifysh
 		cd ~/container/consolex
 		git remote update
 
