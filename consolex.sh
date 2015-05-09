@@ -148,7 +148,7 @@ function screen_wd1337 {
 
 
 function screen_notifysh {
-	./notifysh/notify.sh
+	../notifysh/notify.sh
 }
 
 #main, not looped
