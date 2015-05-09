@@ -128,7 +128,7 @@ echo
 echo -e "Minecraft server status:"
 echo
 
-while read -r HOSTENTRY; do python ./bin/mcs.py $HOSTENTRY; done < ~/container/persistent/mcs/servers.txt
+while read -r HOSTENTRY; do python ./bin/mcs.py $HOSTENTRY; done < ~/container/persistence/mcs/servers.txt
 echo -e ""$DEF""
 
 }
@@ -146,12 +146,19 @@ function screen_wd1337 {
 	popd
 }
 
+
+function screen_notifysh {
+	./notifysh/notify.sh
+}
+
 #main, not looped
 trap clean_up SIGINT SIGTERM
 init
 display "screen_jmi" "2"
 display "screen_terminfo" "2"
 display "screen_wd1337" "0"
+display "screen_notifysh" "0"
 #display "screen_amgstatus" "5"
 #display "screen_mcstatus" "5"
 display "screen_powerbutton" "0"
+
