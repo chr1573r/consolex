@@ -51,6 +51,7 @@ while true
 			echo "Rydde opp"
 			rm -rf ~/container/consolex
 			rm -rf ~/container/watchdog1337pitft
+			rm -rf ~/container/notifysh
 			rm ~/container/update.txt
 			rm ~/container/ready.txt
 
