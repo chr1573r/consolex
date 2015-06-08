@@ -56,7 +56,7 @@ function screen_jmi {
 	#echo -e "    Incredible weather statistics from Gimlemoen"
 	echo
 	echo
-	eho
+	echo
 	echo -e ""$LIGHTGREEN"   < Wireless APs provisioned through provi.sh >"
 	echo
 	echo
