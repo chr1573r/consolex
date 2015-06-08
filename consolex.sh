@@ -59,7 +59,7 @@ function screen_jmi {
 	#ec
 	#figlet -t -c -f mono9 " $(curl -s http://gateway.hybel.csdnserver.com:8181/current.txt)$(echo -e "\xb0") "
 	#figlet -t -c -f mono9 " $(curl -s http://okarin/current.txt)$(echo -e "\xb0") "
-	figlet -t -c -f mono9 " $(cat /home/christer/container/persistence/provish)$(echo -e "\xb0") "
+	figlet -t -c -f mono9 " $(cat /home/christer/container/persistence/provish) "
 	echo -e ""$DEF""
 	#ec
 	#echo -e "    Provided by Jonassen meterologiske institutt"
