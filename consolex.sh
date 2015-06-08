@@ -55,8 +55,8 @@ function screen_jmi {
 	ec
 	#echo -e "    Incredible weather statistics from Gimlemoen"
 	echo -e ""$LIGHTGREEN"   < Wireless APs provisioned through provi.sh >"
-	#ec
-	#ec
+	ec
+	ec
 	#figlet -t -c -f mono9 " $(curl -s http://gateway.hybel.csdnserver.com:8181/current.txt)$(echo -e "\xb0") "
 	#figlet -t -c -f mono9 " $(curl -s http://okarin/current.txt)$(echo -e "\xb0") "
 	figlet -t -c -f mono9 " $(cat /home/christer/container/persistence/provish) "
