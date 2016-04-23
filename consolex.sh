@@ -23,6 +23,9 @@ function init {
 	LIGHTYELLOW="\x1b[33;01m"
 	YELLOW="\x1b[33;11m"
 
+	[[ -f "$HOME/consolex.env" ]] && source "$HOME/consolex.env" || \
+	container="$HOME/container"
+
 	reset
 }
 
@@ -53,17 +56,17 @@ function display {
 
 function screen_jmi {
 	ec
-	#echo -e "    Incredible weather statistics from Gimlemoen"
-	echo
-	echo -e ""$LIGHTGREEN"   < Wireless APs provisioned through provi.sh >"
-	echo
-	echo
+	echo -e "    Incredible weather statistics from Gimlemoen"
+	#echo
+	#echo -e ""$LIGHTGREEN"   < Wireless APs provisioned through provi.sh >"
+	#echo
+	#echo
 	#figlet -t -c -f mono9 " $(curl -s http://gateway.hybel.csdnserver.com:8181/current.txt)$(echo -e "\xb0") "
-	#figlet -t -c -f mono9 " $(curl -s http://okarin/current.txt)$(echo -e "\xb0") "
-	figlet -t -c -f mono9 "$(cat /home/christer/container/persistence/provish)"
+	figlet -t -c -f mono9 " $(curl -s http://okarin/current.txt)$(echo -e "\xb0") "
+	#figlet -t -c -f mono9 "$(cat /home/christer/container/persistence/provish)"
 	echo -e ""$DEF""
-	#ec
-	#echo -e "    Provided by Jonassen meterologiske institutt"
+	ec
+	echo -e "    Provided by Jonassen meterologiske institutt"
 }
 
 function screen_terminfo {
@@ -76,7 +79,7 @@ function screen_powerbutton {
 	echo -e "                        ###"
 	echo -e "                        ###"
 	echo -e "                        ###"
-	echo -e "                  ###   ###   ###" 
+	echo -e "                  ###   ###   ###"
 	echo -e "                 ##     ###     ##"
 	echo -e "                ##      ###      ##"
 	echo -e "               ##       ###       ##"
@@ -105,7 +108,7 @@ echo -e "            _/_/_/_/  _/  _/  _/  _/  _/_/  "
 echo -e "           _/    _/  _/      _/  _/    _/   "
 echo -e "          _/    _/  _/      _/    _/_/_/    "
 echo
-echo -e "        AutoMapGeneratorScript by Cj Designs" 
+echo -e "        AutoMapGeneratorScript by Cj Designs"
 echo -e "       :------------------------------------:"$LIGHTCYAN""
 echo
 echo
@@ -129,7 +132,7 @@ echo
 echo -e "Minecraft server status:"
 echo
 
-while read -r HOSTENTRY; do python ./bin/mcs.py $HOSTENTRY; done < ~/container/persistence/mcs/servers.txt
+while read -r HOSTENTRY; do python ./bin/mcs.py $HOSTENTRY; done < "$container/persistence/mcs/servers.txt"
 echo -e ""$DEF""
 
 }
@@ -162,4 +165,3 @@ display "screen_wd1337" "0"
 #display "screen_amgstatus" "5"
 #display "screen_mcstatus" "5"
 display "screen_powerbutton" "0"
-
