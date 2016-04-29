@@ -1,0 +1,22 @@
+  echo -e "                        ###"
+  echo -e "                        ###"
+  echo -e "                        ###"
+  echo -e "                  ###   ###   ###" 
+  echo -e "                 ##     ###     ##"
+  echo -e "                ##      ###      ##"
+  echo -e "               ##       ###       ##"
+  echo -e "               ##       ###       ##"
+  echo -e "               ##                 ##"
+  echo -e "                ##               ##"
+  echo -e "                 ##             ##"
+  echo -e "                  ####       ####"
+  echo -e "                     #########"
+  echo
+  echo
+  echo -e "         Power button, hold now to activate"
+  sleep 2
+  sudo python ./bin/readTouch.py
+  if [[ "$?" == "0" ]]; then
+    echo -ne ""$LIGHTGREEN"                  Shutdown initiated!"
+    sudo halt
+  fi

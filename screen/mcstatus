@@ -1,0 +1,14 @@
+echo -e ""$GREEN"          CCCCCC    SSSSSS   DDDDD     NN       NN"
+echo -e "        CC        SS        DD   DD   NNN      NN"
+echo -e "       CC         SSS      DD    D   NN  NN   NN"
+echo -e "      CC           SSS    DD    D   NN   NN  NN"
+echo -e "     CC             SS   DD   DD   NN    NN NN"
+echo -e "     CCCCCC   SSSSSS    DDDDD     NN     NNN"
+echo -e "    _________________________________________"$LIGHTCYAN""
+echo
+echo -e "Minecraft server status:"
+echo
+
+while read -r HOSTENTRY; do python ./bin/mcs.py $HOSTENTRY; done < ~/container/persistence/mcs/servers.txt
+echo -e ""$DEF""
+

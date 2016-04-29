@@ -101,6 +101,10 @@ function screen_powerbutton {
 
 }
 
+function screen_api_client {
+	bash "$container/persistence/api_client.sh"
+}
+
 function screen_amgstatus {
 echo -e ""$GREEN"                _/_/    _/      _/    _/_/_/"
 echo -e "             _/    _/  _/_/  _/_/  _/       "
@@ -159,6 +163,7 @@ function screen_notifysh {
 trap clean_up SIGINT SIGTERM
 init
 #display "screen_jmi" "4"
+display "screen_api_client" "0"
 #display "screen_terminfo" "2"
 display "screen_wd1337" "0"
 #display "screen_notifysh" "0"

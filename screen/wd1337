@@ -1,0 +1,10 @@
+#!/bin/bash
+echo "Launching fullscreen extension..."
+pushd ../watchdog1337pitft
+if [[ "$(tail -1 settings.cfg)" == "RUN_ONCE=1" ]]; then
+  ./watchdog1337pitft.sh
+else
+  echo "RUN_ONCE=1">>settings.cfg
+  ./watchdog1337pitft.sh
+fi
+popd
